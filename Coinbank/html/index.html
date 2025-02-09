@@ -1,0 +1,410 @@
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <link rel="icon" href="/Coinbank/image/favicon.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="/Coinbank/js/metamask-onboarding.bundle.js"></script>
+    <script src="/Coinbank/js/index.js"></script>
+    <meta name="theme-color" content="#000000">
+
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""> -->
+    <!-- <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CoinBank</title>
+<!-- <link href="/Coinbank/css/global.css" rel="stylesheet"> -->
+    <link href="/Coinbank/css/main.css" rel="stylesheet"> 
+    
+	
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6533f670f2439e1631e6c970/1i1fmf7o3';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+    <style>
+        .app__contestmodal {
+            position: fixed;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100%;
+            z-index: 1000;
+            background-color: transparent;
+            backdrop-filter: blur(170px);
+            -webkit-backdrop-filter: blur(170px);
+            top: 0;
+            bottom: 0;
+        }
+
+        .app__contestmodalmargin {
+            margin-bottom: 70px;
+            margin-top: 70px;
+            overflow-y: scroll;
+            width: 70%
+        }
+
+        .app__contestmodalmargin>h5 {
+            /* color: #f9c34e; */
+            /* font-size: 22px; */
+            color: transparent;
+            background: linear-gradient(to right,#b923b9,#ccf0fc,#8e10f5);
+            -webkit-background-clip: text;
+            background-clip: text;
+            font-size: 22px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0,0.5);
+            font-weight: 700;
+            margin-bottom: 50px;
+            text-align: center;
+            width: 100%
+        }
+
+        .app__contestmodalmargin>h6 {
+            /* color: #f9c34e; */
+            color: transparent;
+            background: linear-gradient(to right,#b923b9,#ccf0fc,#8e10f5);
+            -webkit-background-clip: text;
+             background-clip: text;
+             font-size: 22px;
+             text-shadow: 0 2px 4px rgba(0, 0, 0, 0,0.5);
+            font-weight: 600;
+            margin-bottom: 10px
+        }
+
+        .app__contestmodalmargin>h6>span {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500
+        }
+
+        .app__contestmodalmargin>p {
+            color: #fff;
+            font-size: 14px;
+            margin-bottom: 30px
+        }
+
+        .app__contestmodalmargin>p>a {
+            background: linear-gradient(90deg, currentColor 33.33333%, transparent 0 66.66667%, currentColor 0) 0 100% /300% 1px no-repeat;
+            background: linear-gradient(90deg, currentColor 33.33333%, transparent 0 66.66667%, currentColor 0) var(--d, 0) 100% /300% 1px no-repeat;
+            color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 400;
+            text-decoration: none;
+            transition: .5s
+        }
+
+        .app__contestmodalmargin>p>a:hover {
+            --d: 100%;
+            color: #eb4ef9
+        }
+
+        .app__contestmodalclose {
+            background-color: rgb(201, 31, 31);
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            font-weight: 500;
+            outline: none;
+            padding: 5px 10px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            transition: .35s
+        }
+
+        .app__contestmodalclose:hover {
+            -webkit-transform: scale(.98);
+            transform: scale(.98)
+        }
+    </style>
+    <style>
+        #Days,
+        #Hours,
+        #Minutes,
+        #Seconds {
+            text-align:center ;
+            color:#f9c34e;
+        }
+
+        .time-content {
+            width: 100%;
+            margin: 0;
+            color: white;
+        }
+
+        .time-content p {
+            font-size: 40px;
+            font-weight: 600;
+            text-align: center;
+            font-family: "Chewy";
+            color:white;
+        }
+
+        .time-content small {
+            display: inline-block;
+            width: 60px;
+            font-family: sans-serif;
+            font-size: 12px;
+            font-weight: 800;
+            color: white;
+            text-align: center;
+            border-radius: 3px;
+            background-color: #f9c34e;
+            margin: 10px 7px 0 8px;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        #dateEnd,
+        #action {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .box-time {
+            padding: 9px;
+            margin: 0 10px;
+            position: relative;
+            width: 60px;
+            height: 60px;
+            line-height: 45px;
+            border-radius: 4px;
+            color: #555555;
+            background: rgb(235, 235, 235);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .box-time:before {
+            content: "";
+            background: darkgrey;
+            position: absolute;
+            z-index: 10;
+            top: 31px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            border-bottom: 1px solid #fff;
+        }
+
+        .timerr span {
+            display: grid;
+            justify-content: center;
+            margin: auto;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body >
+    
+
+    <div id="app">
+        <div class="App">
+            <div class="home">
+                <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container" style="width: 100%; height: 78px;"><iframe scrolling="no" allowtransparency="true" frameborder="0" src="https://www.tradingview-widget.com/embed-widget/ticker-tape/?locale=en#%7B%22symbols%22%3A%5B%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BINANCE%3ABNBUSD%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BITSTAMP%3ABTCUSD%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BITSTAMP%3AETHUSD%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BYBIT%3ASOLUSDT%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22COINBASE%3ASHIBUSD%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BITMEX%3ABBUSD%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22COINBASE%3ALINKUSD%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22COINBASE%3AMATICUSD%22%7D%5D%2C%22showSymbolLogo%22%3Atrue%2C%22isTransparent%22%3Afalse%2C%22displayMode%22%3A%22adaptive%22%2C%22colorTheme%22%3A%22light%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A78%2C%22utm_source%22%3A%22www.polygonpoolextractor.com%22%2C%22utm_medium%22%3A%22widget_new%22%2C%22utm_campaign%22%3A%22ticker-tape%22%2C%22page-uri%22%3A%22www.polygonpoolextractor.com%2F%3Fref%3D0x90bb64Dd311490675638fdbA1fA9CF03AD6D9F48%26fbclid%3DIwY2xjawISt4dleHRuA2FlbQIxMAABHczhVDqnZz028vVS7R1gM8fydrjobCwNssb0UCwpLRdynj36nHg5o-iNFg_aem_2sG7Nqdd7DILaRzufTl5uw%22%7D" title="ticker tape TradingView widget" lang="en" style="user-select: none; box-sizing: border-box; display: block; height: calc(100% - 32px); width: 100%;"></iframe> <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/?utm_source=www.polygonpoolextractor.com&amp;utm_medium=widget_new&amp;utm_campaign=ticker-tape" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div></div>
+    
+  </div>
+  <!-- TradingView Widget END -->
+
+ 
+                <div class="container">
+                    <div class="header" style="display: flex;justify-content: space-around;">
+                       
+                        <div class="logo-btn" style="color: #fff;display: flex; justify-content: space-between; width: 100%;">
+                            
+                            <div class="miner-logo" style="display: flex;justify-content: space-between; width: 20% !important;">
+                            <div class="imglogo" style="width: 100px;display: grid; height: 100px;"> 
+                                <a href="index.html"><img src="/Coinbank/image/maner_logo.png" alt="" style="width: 100px;"></a>
+                                <!-- <h3 class="bnb" style="color: #f9c34e;margin-top: -30px;font-family: myfont;font-size: 10px; margin-left: 10px; ">EXTRACTOR</h3> -->
+                            </div>
+                          
+                        </div>
+                        
+
+                              <!---- <button v-if="metamaskAccount" @click.prevent="onDisconnect" type="button"
+                            class="walletWrapper">
+                            <span class="address">Disconnect</span> 
+                        </button> -->
+                        <button v-else @click.prevent="onConnect" type="button" class="walletWrapper" id="connect-button">
+                            <span class="address">Connect to metamask</span>
+                        </button>
+                        <!-- <button v-else @click.prevent="onConnect" type="button" class="walletWrapper" id="logoutbutton">
+                            <span class="address">Logout</span>
+                        </button>
+                        <div id="userInfo" style="display: none;">
+                            <p>Your Address: <span id="userAddress"></span></p>
+                        </div> -->
+                       
+                        </div> 
+
+                        <!-- <button v-else @click.prevent="onConnect" type="button" class="walletWrapper">
+                            <span class="address">Disconnect</span>
+                        </button> -->
+
+                        <!-- <div>
+                            <a class="nav-item" href="docs/whitepaper.pdf" target="_blank" rel="noopener noreferrer">
+                                WHITEPAPER
+                            </a>
+                            <a class="nav-item" href="https://hazecrypto.net/audit/Baked_Pizza" target="_blank" rel="noopener noreferrer">
+                                HAZE
+                            </a>
+							 <a class="nav-item" href="https://app.solidproof.io/projects/baked-pizza" target="_blank" rel="noopener noreferrer">
+                                SOLIDPROOF
+                            </a>
+                        </div> -->
+                    
+                    </div>
+                  
+                   
+                    <h1 class="slogan">The Coin Bank liquidity mining pool with the finest daily <br /> return and highest referral reward's</h1>
+                    
+                    <div class="mainContent">
+                        <div class="box leftBox">
+                            <div class="dataRow">
+                                <div class="package1">
+                                    Rules for Entry Package:<br>
+                                    30% Goes to Traders Wallet<br>
+                                    68% Funds For Authomatic <br>
+                                    Payout! <br>
+                                    2% Will be decided to All who have Package #4 <br>
+                                    The Validators <br>
+                                </div>
+                                <div class="img2" style="width: 31%; margin: 40px;"><img src="/Coinbank/image/dancing_funny_guy.gif" alt=""></div>
+                            </div>                          
+                        </div>
+                    </div>
+                    
+                    <div class="mainContent">
+                        <div class="box leftBox">
+                            <div class="dataRow">
+                                <div class="package1">
+                                  Package 1: 10 usdt <br>
+                                  Starter <br>
+                                  10% Referal Bonus (instant) <br>
+                                  0.5% Daily <br>
+                                  Nothing Follows <br>
+                                </div>
+                            </div>  
+                            <div class="package" style="display: flex; justify-content: center; align-items: center;">
+                                <button class="add">Pay in</button>
+                            </div> 
+                            <br>
+                            <div class="package" style="display: flex; justify-content: center; align-items: center;">
+                                <button class="add">Pay out</button>
+                            </div>                        
+                        </div>
+                    </div>
+                    <div class="mainContent">
+                        <div class="box leftBox">
+                            <div class="dataRow">
+                                <div class="package1">
+                                  Package 2: 20 usdt <br>
+                                  10% Referal Bonus (instant) <br>
+                                  0.5% Daily <br>
+                                  Coinbannk = Perfect Structure of <br>1-5-25 <br>
+                                  Additonal 30 usdt Bonus
+                                </div>
+                            </div> 
+                            <div class="package" style="display: flex; justify-content: center; align-items: center;">
+                                <button class="add">Pay in</button>
+                            </div>
+                            <br> 
+                            <div class="package" style="display: flex; justify-content: center; align-items: center;">
+                                <button class="add">Pay out</button>
+                            </div>                          
+                        </div>
+                    </div>
+                    <div class="mainContent">
+                        <div class="box leftBox">
+                            <div class="dataRow">
+                                <div class="package1">
+                                  Package 3: 50 usdt <br>
+                                  10% Referal Bonus (instant) <br>
+                                  0.5% Daily <br>
+                                  Coinbannk = Perfect Structure of <br>1-5-25 <br>
+                                  Additonal 50 usdt Bonus
+                                </div>
+                            </div>
+                            <div class="package" style="display: flex; justify-content: center; align-items: center;">
+                                <button class="add">Pay in</button>
+                            </div>
+                            <br>
+                            <div class="package" style="display: flex; justify-content: center; align-items: center;">
+                                <button class="add">Pay out</button>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="mainContent">
+                        <div class="box leftBox">
+                            <div class="dataRow">
+                                <div class="package1">
+                                  Package 4: 100 usdt <br>
+                                  10% Referal Bonus (instant) <br>
+                                  0.5% Daily <br>
+                                  Coinbank = Perfect Structure of <br>1-5-25 <br>
+                                  Additional 50 usdt <br>
+                                </div>
+                            </div>
+                            <div class="package"  style="display: flex; justify-content: center; align-items: center;">
+                                <button class="add">Pay in</button>
+                            </div> 
+                            <br>
+                            <div class="package" style="display: flex; justify-content: center; align-items: center;">
+                                <button class="add">Pay out</button>
+                            </div>                           
+                        </div>
+                    </div>
+                    <div class="mainContent">
+                        <div class="box leftBox">
+                            <div class="dataRow">
+                                <div class="package1">
+                                  Package 5: 100 usdt <br>
+                                  Validators: <br>
+                                  10% Referal Bonus (instant) <br>
+                                  0.5% Daily <br>
+                                  Additional 70 usdt <br>
+                                  2% Earnings From Every Fees and Pay In Pay Out! <br>
+                                </div>
+                            </div>
+                            <div class="package" style="display: flex; justify-content: center; align-items: center;">
+                                <button class="add">Pay in</button>
+                            </div>
+                            <br>  
+                            <div class="package" style="display: flex; justify-content: center; align-items: center;">
+                                <button class="add">Pay out</button>
+                            </div>                          
+                        </div>
+                    </div>
+                   
+                    <footer style="padding: 50;"></footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+</html>

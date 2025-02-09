@@ -1,0 +1,587 @@
+@font-face {
+    font-family: fonter;
+    src: url(../font/aAbstractGroovy.otf);
+}
+  
+body,html {
+    width: 100%;
+    height: 100%
+}
+
+body {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: fonter;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 2px;
+}
+
+.package .add{
+    font-family: fonter;
+    background-color: #b923b9;
+    border-radius: 20px;
+    color: white;
+}
+
+.package .add:hover{
+     background: linear-gradient(to right,#ccf0fc,);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.nav-item {
+    color: #8e10f5;
+    font-size: 16px;
+    font-weight: 800;
+    margin: 0 8px;
+}
+
+.nav-item:hover {
+    /* color: #d755f1; */
+    color: transparent;
+    background: linear-gradient(to right,#b923b9,#ccf0fc,#8e10f5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* font-size: 17px; */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0,0.5);
+}
+
+.home {
+    min-height: 100vh;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(rgb(29, 8, 78),rgb(1, 1, 22),rgb(148, 26, 119) );
+    /* background: linear-gradient(#07071d, #04021a, #030327); */
+    background-image: url(/Coinbank/image/backgroundcover.png);
+    opacity: calc(0.8rem);
+}
+
+.tradingview-widget-copyright {
+    display: none !important;
+  }
+  .tradingview-widget-container iframe{
+    font-family: fonter !important;
+}
+
+.home .header .walletWrapper  {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 200px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 5px 30px;
+    border: 2px solid #d755f1;
+    border-radius: 5px;
+    text-align: center;
+    height: 60px;
+    background-color: transparent;
+    font-weight: bold;
+    box-shadow: 3px 12px 30px #6604c9fd;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 25px; 
+}
+
+.home .header .walletWrapper:hover { 
+    cursor: pointer; 
+    color: #fff;
+    border:2px solid #fff;
+    background :  linear-gradient(to right ,rgba(10, 10, 10, 0.4),rgba(26, 26, 25, 0.4),rgba(20, 20, 20, 0.4));
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    
+} 
+
+.home .header .logo {
+    width: 300px;
+}
+
+.home .slogan {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    line-height: 1.3;
+    font-weight: 800;
+    margin: 50px 0;
+  }
+  
+  .home .mainContent {
+    width: 800px;
+    max-width: 100%;
+    margin: 50px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    grid-gap: 20px;
+    gap: 20px
+  }
+  
+  
+  
+  .home .mainContent .box {
+    width: calc(50% - 10px)
+  }
+  
+  .home .mainContent .leftBox {
+    padding: 20px;
+    background: transparent;
+    border-radius: 10px;
+    border: 2px solid #d755f1;
+    backdrop-filter: blur(170px);
+    box-shadow: 3px 12px 30px #6604c9fd;
+    
+  
+  }
+  
+  
+  .home .mainContent .rightBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+  }
+  
+  .home .mainContent .dataRow {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 8px ;
+    color: white;
+    font-size: 14px;
+    line-height: 35px
+  }
+  
+  .home .mainContent .dataRow .value {
+    /* font-weight: 600; */
+    font-size: 14px;
+    color: white
+  }
+  
+  /* input on the first box */
+  .home .mainContent .ant-input-affix-wrapper {
+    height: 55px;
+    margin: 0;
+    position: relative;
+    border: 2px solid #d755f1;
+    box-shadow: none;
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px);
+    box-sizing: border-box;
+    border-radius: 5px;
+    background: transparent
+  }
+  
+  
+  
+  .home .mainContent .ant-input-affix-wrapper .ant-input-prefix, .home .mainContent .ant-input-affix-wrapper .ant-input-suffix {
+    color: white;
+    font-size: 13px;
+    /* font-weight: 600; */
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+  }
+  
+  .home .mainContent .ant-input-affix-wrapper .ant-input-prefix span, .home .mainContent .ant-input-affix-wrapper .ant-input-suffix span {
+    color: white
+  }
+  
+  .home .mainContent .ant-input-affix-wrapper .suffix {
+    padding-right: 10px
+  }
+  
+  .home .mainContent .ant-input-affix-wrapper .ant-input {
+    border: none;
+    color: white;
+    background: transparent;
+    font-size: 16px;
+    /* font-family: myfont; */
+    /* font-weight: 400; */
+    line-height: 55px;
+    text-align: start;
+    padding-left: 15px
+  }
+  
+  .home .mainContent .ant-input-affix-wrapper .ant-input:hover {
+    border: none !important
+  }
+  
+  .home .mainContent .ant-input-affix-wrapper .ant-input:focus {
+    border: none !important;
+    outline: 0;
+    box-shadow: none !important
+  }
+  
+  .home .mainContent .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+    border-color: #fff !important;
+    border-right-width: 2px
+  }
+  
+  .home .mainContent .ant-input-affix-wrapper-focused {
+    outline: 0;
+    border: 2px solid #d755f1 !important;
+    box-shadow: none !important
+  }
+  
+  .home .mainContent .buyButton {
+    border: 2px solid #d755f1;
+    border-radius: 5px;
+    /* color: #fff; */
+    box-shadow: 3px 12px 30px 6px #6604c9fd;
+    /* font-size: 16px; */
+    /* font-weight: bold; */
+    line-height: 42px;
+    padding: 5px 0;
+    text-align: center;
+    display: block;
+    width: 70%;
+    background: transparent;
+    margin-top: 10px;
+    backdrop-filter: blur(200px);
+    -webkit-backdrop-filter: blur(200px);
+  }
+  .home .mainContent .buyButton .address {
+    color: transparent;
+    background: linear-gradient(to right,#b923b9,#ccf0fc,#8e10f5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 17px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0,0.5);
+  }
+  
+  .home .mainContent .buyButton:hover {
+    cursor: pointer;
+    border: 2px solid #fff;
+    color: #fff;
+    background : linear-gradient(to right ,rgba(10, 10, 10, 0.4),rgba(26, 26, 25, 0.4),rgba(20, 20, 20, 0.4));
+   
+    
+  }
+  
+  .home .mainContent .actionWrapper {
+    margin-top: 30px;
+    border-top: 1px dashed #ece5ee;
+    padding-top: 10px
+  }
+  
+  .home .mainContent .actionWrapper .actionButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+  }
+  
+  .home .mainContent .actionWrapper .actionButtons button {
+    width: calc(50% - 10px);
+    text-align: center;
+    border: 2px solid #d755f1;
+    /* box-shadow: 3px 12px 30px rgba(12, 10, 14, 0.993); */
+    /* color:#fff; */
+    /* font-weight: 700; */
+    /* font-size: 16px; */
+    box-shadow: 3px 12px 30px 6px #6604c9fd;
+    padding: 8px 0;
+    background: transparent;
+    border-radius: 5px;
+    backdrop-filter: blur(200px);
+    -webkit-backdrop-filter: blur(200px);
+  
+  }
+  .home .mainContent .actionWrapper .actionButtons button .address {
+    color: transparent;
+    background: linear-gradient(to right,#b923b9,#ccf0fc,#8e10f5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 17px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0,0.5);
+  }
+  
+  .home .mainContent .actionWrapper .actionButtons button:hover {
+    cursor: pointer;
+    border: 2px solid #fff;
+    color: #fff;
+    background : linear-gradient(to right ,rgba(10, 10, 10, 0.4),rgba(26, 26, 25, 0.4),rgba(20, 20, 20, 0.4));
+  
+  }
+  
+  .home .mainContent .contractInfo {
+    background: transparent;
+    border-radius: 10px;
+    border: 2px solid #d755f1;
+    backdrop-filter: blur(170px);
+    box-shadow: 3px 12px 30px #6604c9fd;
+    padding: 20px;
+    /* display: flex; */
+    align-content: center;
+    margin-top: 20px;
+    justify-content: space-between;
+  
+  }
+  .home .mainContent .contract{
+    display: flex;
+    padding: 20px;
+    align-content: center;
+    justify-content: space-between;
+  
+  }
+  
+  .home .mainContent .contractInfo img {
+    width: 100%
+  }
+  
+  .home .mainContent .contractInfo .data {
+    font-size: small;
+    width: 65%;
+    display: grid;
+    /* margin-top: px; */
+    
+  }
+  
+  .home .mainContent .contractInfo  h1 {
+    color: transparent;
+    background: linear-gradient(to right,#b923b9,#ccf0fc,#8e10f5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 22px;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0,0.5);
+    /* font-weight: 700; */
+    margin-bottom: 10px
+    /* font-weight: 700; */
+    
+  }
+  
+  .home .mainContent .contractInfo .data .dataRow {
+    font-size: 15px
+  }
+  
+  .logo-btn img{
+  width: 150px;
+  height: 99px;
+  padding-bottom: 7px;
+  }
+  
+  
+  
+  
+  
+  .walletWrapper .address {
+    color: transparent;
+    background: linear-gradient(to right,#b923b9,#ccf0fc,#8e10f5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 17px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0,0.5);
+  
+  }
+  
+  @media (max-width:765px) {
+    .nav-item {
+        color: white;
+        font-size: 16px;
+        /* font-weight: 800; */
+        margin: 0 15px;
+    }
+  
+    footer .nav-item {
+        font-size: 11px;
+    }
+  
+    .home .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 0 0;
+        margin-bottom: 30px
+    }
+  
+    .home .header .walletWrapper {
+        width: 250px;
+        font-size: 15px;
+        padding: 5px 0;
+        
+    }
+    
+  
+    .home .header .logo {
+        margin: 20px auto 20px
+    }
+  
+    .home .slogan {
+        font-size: 22px;
+        line-height: 1.5;
+        margin: 30px 0;
+    }
+  
+    .package.add{
+        font-family: fon;
+
+    }
+    .home .mainContent {
+        margin: 30px auto 0;
+        align-items: center;
+        flex-direction: column;
+        grid-gap: 10px;
+        gap: 10px
+    }
+  
+    .home .mainContent .box {
+        width: calc(100% - 20px)
+    }
+  
+    .home .mainContent .referral {
+        margin-top: 10px
+    }
+  }
+  
+  .blink_me {
+    -webkit-animation: blinker 2s linear 1;
+    animation: blinker 2s linear 1
+  }
+  
+  @-webkit-keyframes blinker {
+    50% {
+        color: #fff;
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1)
+    }
+  }
+  
+  @keyframes blinker {
+    50% {
+        color: #fff;
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1)
+    }
+  }
+  
+  .Countdown {
+    margin: 0 auto
+  }
+  
+  .Countdown-col {
+    display: inline-block
+  }
+  
+  .Countdown-col-element {
+    display: inline-block;
+    margin: 0;
+    font-weight: 600
+  }
+  
+  .add{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .customModal .ant-modal-content {
+    overflow-y: scroll;
+    min-height: 300px;
+    border-radius: 20px;
+    width: 350px;
+    max-width: 100%;
+    margin: 0 auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    border: 2px solid #f9c34e;
+    background-color: #f9c34e
+  }
+  
+  .customModal .ant-modal-content::-webkit-scrollbar {
+    display: none
+  }
+  
+  .customModal .ant-modal-content .ant-modal-body {
+    padding: 10px 0
+  }
+  
+  .customModal .ant-modal-content .ant-modal-body .close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    z-index: 3;
+    cursor: pointer;
+    width: 25px;
+    opacity: .9;
+    font-size: 20px;
+    color: #fff
+  }
+  
+  .customModal .ant-modal-content .ant-modal-body .title {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+  }
+  
+  .customModal .ant-modal-content .ant-modal-body .modalHeader {
+    width: calc(100% - 20px);
+    margin: 10px
+  }
+  
+  .customModal .ant-modal-close-x {
+    color: #fff;
+    display: none
+  }
+  
+  @media screen and (max-width: 768px) {
+    .header {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+    .logo-btn{
+        color: #fff;
+        display: flex; 
+        justify-content: space-between !important; 
+        width: 100%;
+    }
+   
+    .logo-btn .walletWrapper{
+        width: 130px !important;
+        padding-inline: 20px;
+    }
+    .logo-btn .miner-logo{
+        margin-top: -10px !important;
+        margin-right: 30px !important;
+        padding-right: 10px !important;
+    }
+    .imglogo{
+        width: 90px !important;
+        display: grid !important ; 
+        height: 90px !important;
+    }
+    .imglogo img {
+       width: 100px !important;
+    }
+    .img2 {
+        margin-top: 39px;
+        padding-top: 28px;
+    }
+    .buttonGroup {
+       padding-inline: 50px !important;
+    }
+    .buttonGroup .nav-item {
+        font-size: 11px;
+        
+    
+  
+  
+    }
+}
+  
